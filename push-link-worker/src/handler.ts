@@ -17,8 +17,19 @@ export async function handlePullLink(request: RoutedRequest): Promise<Response> 
   return Response.redirect(url, 302)
 }
 
+export async function handlePushLinkGet(request: RoutedRequest): Promise<Response> {
+  const id = request.params?.id;
 
-export async function handlePushLink(request: RoutedRequest): Promise<Response> {
+  if(!id || !request.query?.url) {
+    return responseError(400)
+  }
+
+  await KV.put(id, request.query?.url)
+
+  return Response.redirect(request.query?.url, 302)
+}
+
+export async function handlePushLinkPost(request: RoutedRequest): Promise<Response> {
   const id = request.params?.id;
 
   if(!id || request.headers.get('Content-Type') !== 'application/json') {
