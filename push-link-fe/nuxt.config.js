@@ -1,4 +1,7 @@
 export default {
+  server: {
+    host: '0'
+  },
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
 
@@ -49,6 +52,7 @@ export default {
 
   env: {
     apiUrl: process.env.API_URL || 'http://localhost:3000',
-    baseUrl: process.env.BASE_URL || 'http://localhost:3000'
+    baseUrl: process.env.BASE_URL || 'http://localhost:3000',
+    iCloudShortcutUrl: process.env.ICLOUD_SHORTCUT_LINK
   }
 }
