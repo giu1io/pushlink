@@ -8,4 +8,4 @@ Backend (`push-link-worker`) is a CloudFlare worker that saves user input on Clo
 
 This project was mostly an excuse to play with Pages and Workers on Cloudflare.
 
-You can see a working version of the website at [pushlink.ml](https://pushlink.ml)
+You can see a working version of the website at [pushlink.giulio.dev](https://pushlink.giulio.dev)
